@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <title>
+      ICS Volumes
+    </title>
+    <link rel="stylesheet" type="text/css" href="collapse.css">
+  </head>
+  <body>
+    <%- include("header");%>
+    <H1> Volumes</H1>
+    <%- include("error");%>
+    <% if(code=="200")
+      {
+        for(i=0;i<result.length;i++) { %>
+          <div class="row">
+            <a href="#hide<%= i %>" class="hide" id="hide<%= i %>"><%= result[i].volName %></a>
+            <a href="#show<%= i %>" class="show" id="show<%= i %>"><%= result[i].volName %></a>
+            <div class="list">
+              <P>
+                FS Id: <%= result[i].fsId %></br>
+                Path: <%= result[i].hostPath %>
+              </P>
+            </div>
+          </div>
+          <br>
+      <% }
+    } %>
+  </body>
+</html>

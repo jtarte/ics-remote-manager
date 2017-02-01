@@ -1,0 +1,19 @@
+  <% if (code=="500" || code=="401") { %>
+    An error occurs<BR>
+    <table>
+      <tr><td>Code:</td><td><%= result.code %></td></tr>
+      <tr><td>Description:</td><td><%= result.description %></td></tr>
+      <tr><td>Environment:</td><td><%= result.environment %></td></tr>
+      <tr><td>Host Id:</td><td><%= result.host_id %></td></tr>
+      <tr><td>Incident Id:</td><td><%= result.incident_id %></td></tr>
+      <tr><td>Name:</td><td><%= result.name %></td></tr>
+      <tr><td>Reason Code:</td><td><%= result.rc %></td></tr>
+      <tr><td>Type:</td><td><%= result.type %></td></tr>
+    </table>
+  <% }
+  else if (code!="200")
+  { %>
+    <H3>An error occurs with the reason code : <%= result.code %><H3>
+    <br>
+    Description: <%= result.description %>
+  <% } %>

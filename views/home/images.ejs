@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <title>
+      ICS Images
+    </title>
+    <link rel="stylesheet" type="text/css" href="collapse.css">
+  <body>
+    <%- include("header");%>
+    <H1> Images</H1>
+    <%- include("error");%>
+    <% for(i=0;i<result.length;i++) { %>
+      <div class="row">
+        <a href="#hide<%= i %>" class="hide" id="hide<%= i %>"><%= result[i].Image %></a>
+        <a href="#show<%= i %>" class="show" id="show<%= i %>"><%= result[i].Image %></a>
+        <div class="list">
+          <P> ID: <%=result[i].Id %></P>
+          <P> Tags: <%=result[i].RepoTags %></P>
+          <P> Size: <%=result[i].Size %></P>
+          <P> Virtual size: <%=result[i].VirtualSize %></P>
+          <P> Created: <%=result[i].Created %></P>
+        </div>
+      </div>
+      <br>
+    <% } %>
+  </body>
+</html>

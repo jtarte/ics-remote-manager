@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <header>
+    <title>
+      ICS Containers
+    </title>
+    <link rel="stylesheet" type="text/css" href="collapse.css">
+    </header>
+  <body>
+    <%- include("header");%>
+    <H1> Containers</H1>
+    <%- include("error");%>
+
+  <% if(code=="200") { %>
+    <% for(i=0;i<result.length;i++) { %>
+      <div class="row">
+        <a href="#hide<%= i %>" class="hide" id="hide<%= i %>"><%= result[i].name %></a>
+        <a href="#show<%= i %>" class="show" id="show<%= i %>"><%= result[i].name %></a>
+        <div class="list">
+          <P> Id: <%=result[i].Id %></P>
+          <P> Status: <%=result[i].Status %></P>
+          <P> Label: <%=result[i].Label %></P>
+          <P> Image: <%=result[i].Image %></P>
+          <P> Image Id: <%=result[i].ImageId %></P>
+        </div>
+      </div>
+      <br>
+    <% } %>
+  <% } %>
+  </body>
+</html>

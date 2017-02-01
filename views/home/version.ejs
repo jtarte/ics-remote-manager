@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    <title>
+      ICS Version
+    </title>
+  </head>
+  <body>
+    <%- include("header");%>
+    <H1> Version</H1>
+    <%- include("error");%>
+
+  <% if(code=="200") { %>
+  <table>
+    <tr><td>OS:</td><td><%= result.Os %></td></tr>
+    <tr><td>Version:</td><td><%= result.Version %></td></tr>
+    <tr><td>Build time:</td><td><%= result.BuildTime %></td></tr>
+    <tr><td>API version:</td><td><%= result.ApiVersion%></td></tr>
+  </table>
+  <% } %>
+  </body>
+</html>

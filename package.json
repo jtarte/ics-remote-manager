@@ -1,0 +1,26 @@
+{
+  "name": "ics-remote-manager",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "node app.js",
+    "test": "./node_modules/.bin/mocha"
+  },
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "cfenv": "^1.0.3",
+    "ejs": "^2.5.5",
+    "express": "^4.14.0",
+    "method-override": "^2.3.5",
+    "morgan": "^1.6.1",
+    "multer": "^1.2.1",
+    "nodemon": "^1.7.0",
+    "request": "^2.79.0",
+    "unirest": "^0.5.1",
+    "express-session":"^1.5.0"
+  },
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "mocha": "^2.3.2",
+    "supertest": "^1.1.0"
+  }
+}

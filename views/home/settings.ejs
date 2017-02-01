@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    <title>
+      ICS Settings
+    </title>
+    <script>
+      function reset()
+      {
+        document.getElementById("tokenF").value="";
+        document.getElementById("projectF").value="";
+      }
+      </script>
+  </head>
+  <body>
+    <%- include("header");%>
+    <H1> Settings</H1>
+    <form action="/settings" method="post">
+    <table>
+      <tr>
+        <td>Authentication token:</td>
+        <td><textarea cols="100" rows="5" name="token" id="tokenF"><%= token %></textarea></td>
+      </tr>
+      <tr>
+        <td>Authentication PrOject Id</td>
+        <td><textarea cols="100" rows="5" name="project" id="projectF"><%= project %></textarea></td>
+      </tr>
+    </table>
+    <input type="submit" value="Save"/>
+  </form>
+  <button onclick="reset()">Reset</button>
+  </body>
+</html>
